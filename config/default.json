@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://ayush_98:ayush_98@cluster0.oby3j.mongodb.net/<dbname>?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://ayush_98:ayush_98@cluster0.oby3j.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "jwtToken": "MySecretKey"
 }
