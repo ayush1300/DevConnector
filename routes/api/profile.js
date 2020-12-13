@@ -9,7 +9,7 @@ const { check, validationResult } = require("express-validator");
 
 router.get("/me", auth, async (req, res) => {
   try {
-    const profile = Profile.findOne({ user: req.user.id }).populate("user", [
+    const profile = await Profile.findOne({ user: req.user.id }).populate("user", [
       "name",
       "avatar",
     ]);
