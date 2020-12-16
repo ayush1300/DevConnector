@@ -14,6 +14,10 @@ export const Navbar = ({ auth: {isAuthenticated,loading},logout}) => {
         <Link to="/profiles">
         Developers
         </Link>
+
+        <Link to="/posts">
+        Posts
+        </Link>
       </li>
 
       <li>
