@@ -18,24 +18,6 @@ function Login({login,isAuthenticated}) {
   const onSubmit = async e => {
     e.preventDefault();
     
-      // const newUser = {
-      //   name,
-      //   email,
-      //   password
-      // }
-
-      // try {
-      //   const config = {
-      //     headers: {
-      //       "Content-Type": "application/json"
-      //     }
-      //   }
-      //   const body = JSON.stringify(newUser);
-      //   const res = await axios.post("/api/users",body,config);
-      //   console.log(res.data);
-      // } catch (err) {
-      //   console.error(err.response.data);
-      // }
       login({email,password});
   };
   
@@ -75,7 +57,7 @@ function Login({login,isAuthenticated}) {
         <input type="submit" className="btn btn-primary" value="Login" />
       </form>
       <p className="my-1">
-        Don't have an account? <Link to="/login">Sign Up</Link>
+        Don't have an account? <Link to="/register">Sign Up</Link>
       </p>
     </Fragment>
   );

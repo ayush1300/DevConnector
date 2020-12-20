@@ -4,6 +4,7 @@ import { getProfiles } from "../../actions/profile"
 import { connect } from "react-redux"
 import ProfileItem from "./ProfileItem"
 import profile from '../../reducers/profile'
+import Spinner from "../Layout/spinner"
 
 
 const Profiles = ({getProfiles, profile: { profiles,loading}}) => {
@@ -19,9 +20,11 @@ const Profiles = ({getProfiles, profile: { profiles,loading}}) => {
                 <i className="fab fa-connectdevelop"></i>Browse and Connect with Developers
             </p>
             <div className="profiles">
-                {profiles.length>0 ? (profiles.map(profile => (
+                {console.log(loading)}
+                { profiles.length>0 ? (profiles.map(profile => (
                     <ProfileItem key = {profile._id} profile = {profile}/>
-                ))): <h4>No profiles found...</h4>}
+                ))): (<Spinner/>)}
+
             </div>
         </Fragment>
     )
